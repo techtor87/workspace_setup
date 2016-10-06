@@ -1,6 +1,8 @@
 set nocompatible
 " source $VIMRUNTIME/vimrc_example.vim
-" execute pathogen#infect()
+if !empty(glob("~/.vim/autoload/pathogen.vim"))
+   execute pathogen#infect()
+endif
 
 " zo - open fold
 " zc - close fold
@@ -17,6 +19,7 @@ set encoding=utf-8
 let mapleader=","
 nnoremap ; :
 
+set autoread      " refresh files changed in background if no edits
 set nobackup
 set nowritebackup
 set noswapfile
@@ -40,8 +43,6 @@ if has("gui_running")
    set guioptions-=r
    set guifont=Consolas:h9:cDEFAULT
 endif
-
-set autoread
 
 colorscheme slate
 
@@ -144,7 +145,6 @@ map <S-F7> <Esc>:setlocal nospell<CR>
 " z= on misspelled word brings up possible list
 
 map <F11> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
-
 
 " edit vimr/bashrc and load vimrc bindings
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
