@@ -11,6 +11,9 @@ let mapleader=','
 " sourcing .vimperatorrc
 noremap <Leader>r :source ~/.vimperatorrc<CR>
 
+" exit tab from 'x'
+noremap x :quit
+
 " open vimperator stuff in new tabs
 
 set newtab=all
