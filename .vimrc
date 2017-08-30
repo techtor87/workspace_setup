@@ -53,6 +53,9 @@ filetype plugin indent on
 set wildignore+=*\\tmp\\*,*.so,*.swp,*.zip,*.o
 " }}}
 " Search {{{
+
+set path+=**
+
 set incsearch        " search as characters are entered
 set hlsearch         " highlight matches
 set ignorecase       " ignore case for search
@@ -135,6 +138,13 @@ function! StripTrailingWhitespaces()
 endfunction
 autocmd BufWritePre * :call StripTrailingWhitespaces()
 
+function! UpdateCtags()
+   if filereadable('tags')_
+      call system('ctags -a '.expand('%'))
+   endif
+endfunction
+autocmd BufWritePost * :call system('update_ctag')
+
 " set g:multi_cursor_exit_from_visual_mode=0
 " set g:multi_cursor_exit_from_insert_mode=0
 
@@ -145,6 +155,16 @@ map <S-F7> <Esc>:setlocal nospell<CR>
 " z= on misspelled word brings up possible list
 
 map <F11> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
+
+map <F5> :w\|!python %<CR>
+
+" Never go into Ex Mode
+nnoremap Q <nop>
+
+" Ctags
+noremap [t :tprev
+noremap ]t :tnext
+set tags=./tags;/
 
 " edit vimr/bashrc and load vimrc bindings
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
