@@ -138,7 +138,7 @@ fi
 #Perforce Environment Variables
 export P4PORT=ssl:getperfprod.corporate.ge.com:1666
 export P4USER=GFaulconbridge_210060583
-export P4CLIENT=gcf_workspace
+export P4CLIENT=gcf_fea_lccm
 export P4PASSWD=Adel13phikos
 
 export http_proxy=http://210060583:adel2016phikos@trans.setpac.ge.com/pac.pac/
@@ -222,6 +222,12 @@ function setWorkspace
       export P4CLIENT=gcf_streams
       export TMUX_WINDOW_TITLE=Stream_1
       export TMUX_PANE_TITLE=Stream_1
+   elif [ $1 == fea_lccm ]
+   then
+      export workspace_var=~/gcf_fea_lccm/
+      export P4CLIENT=gcf_fea_lccm
+      export TMUX_WINDOW_TITLE=fea_lccm
+      export TMUX_PANE_TITLE=fea_lccm
    elif [ $1 == auriz_rel ]
    then
       export workspace_var=~/gcf_shpt_auriz_rel/
@@ -280,7 +286,7 @@ function setWorkspace
 }
 
 # set default workspace
-setWorkspace lccm
+setWorkspace fea_lccm
 
 function workspace
 {
