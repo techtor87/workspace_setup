@@ -1,0 +1,141 @@
+{
+    "tabnine.experimentalAutoImports": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "python.venvPath": "C:\\Users\\gfaulconbridge\\code\\ADI\\.venv",
+    "vscode-neovim.highlightGroups.highlights": {
+
+        "Directory": "vim",
+        "IncSearch": {
+            "backgroundColor": "theme.editor.findMatchBackground",
+            "borderColor": "theme.editor.findMatchBorder"
+        },
+        "Search": {
+            "backgroundColor": "theme.editor.findMatchHighlightBackground",
+            "borderColor": "theme.editor.findMatchHighlightBorder"
+        },
+        "Visual": {
+            "backgroundColor": "theme.editor.selectionBackground"
+        },
+        "Conceal": "vim",
+        "Substitute": "vim"
+    },
+
+    "diffEditor.ignoreTrimWhitespace": false,
+
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.lineNumbers": "relative",
+    "editor.linkedEditing": true,
+    "editor.minimap.enabled": false,
+
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+
+    "files.autoSave": "onFocusChange",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "gitlens.advanced.messages": {
+        "suppressCreatePullRequestPrompt": true,
+        "suppressGitMissingWarning": true
+    },
+
+    "powershell.promptToUpdatePowerShell": false,
+
+    "python.linting.flake8Enabled": true,
+    "python.formatting.autopep8Args": [
+        "--max-line-length",
+        "120"
+    ],
+    "python.analysis.extraPaths": ["ADI"],
+
+    "remote.SSH.remotePlatform": {
+        "prd-virt-vdi-47l.dev.verveindustrial.com": "linux",
+        "prd-virt-vdi-47.ad.verveindustrial.com": "windows"
+    },
+    "remote.SSH.showLoginTerminal": true,
+    "remote.SSH.foldersSortOrder":"most recently used",
+
+
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.editor.enablePreview": true,
+
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                ":"
+            ]
+        },
+        {
+            "before": [
+                "B"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        {
+            "before": [
+                "E"
+            ],
+            "after": [
+                "$"
+            ]
+        },
+        {
+            "before": [
+                "C-a"
+            ],
+            "after": [
+                "g",
+                "g",
+                "V",
+                "G"
+            ]
+        },
+        {
+            "before": [
+                "C-x"
+            ],
+            "after": [
+                "d"
+            ]
+        }
+    ],
+
+    "vscode-edge-devtools.mirrorEdits": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.fontFamily": "CaskaydiaCove NF",
+    "editor.fontLigatures": true,
+    "python.logging.level": "debug",
+    "vscode-neovim.neovimExecutablePaths.win32": "C:\\Program Files\\Neovim\\bin\\nvim.exe",
+    "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\gfaulconbridge\\AppData\\Local\\nvim\\init.lua",
+    "vscode-neovim.logOutputToConsole": true,
+    "vscode-neovim.mouseSelectionStartVisualMode": true,
+    "python.linting.mypyEnabled": true,
+    "python.formatting.blackArgs": [
+        "\"--config\"",
+        "\"~\\\\code\\\\ADI\\\\pyproject.toml\""
+    ],
+    "[python]": {
+        "editor.formatOnType": true
+    },
+
+}
